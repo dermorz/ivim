@@ -30,6 +30,9 @@ set splitbelow
 set path+=**
 set fillchars+=vert:\│
 set synmaxcol=5000
+set number
+set relativenumber
+set shortmess=a
 
 " set exrc
 " set secure
@@ -50,10 +53,10 @@ set undofile
 " colorscheme abstract
 " colorscheme afterglow
 set background=dark
-colorscheme scheakur
+colorscheme parsec
 ifont iosevka-fixed-ss04-extended 18
 
-let mapleader=","
+let mapleader=" "
 let maplocalleader=","
 
 " Vimtex ------------------------------
@@ -154,8 +157,8 @@ let g:goyo_height = "100%"
 nnoremap <c-8> :Goyo<cr>
 nnoremap <c-1> :call SynGroup()<cr>
 
-" I'm so used to doing this...
-nmap <c-s> :w<cr>
-
+nmap <leader>w :w<cr>
+nmap <leader>ve :e $MYVIMRC<cr>
+nmap <leader>vs :so $MYVIMRC<cr>
 
 " vim: fdm=marker
